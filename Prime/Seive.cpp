@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// int range inside main 10^6  outside main 10^7
+//bool range inside main 10^7 outside main 10^8
+
+
 //o(n log(log n)) 
 int n = 1000000;
 bool sieve[1000001];
