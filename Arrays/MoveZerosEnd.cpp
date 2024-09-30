@@ -38,6 +38,7 @@ void optimal(vector<int>& arr)      // o(x+n-x) => o(n)  + o(1)
             break;
         }
     }
+    if(j==-1) return ;
     for(int i=j+1;i<n;i++)   //o(n-x)
     {
         if(arr[i]!=0)
