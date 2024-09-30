@@ -25,7 +25,7 @@ int better(vector<int>& arr)
 {
 
 }
-void optimal(vector<int>& arr)    
+void optimal(vector<int>& arr)      // o(x+n-x) => o(n)  + o(1)
 {
     //using two pointers
     int j=-1;
@@ -38,7 +38,7 @@ void optimal(vector<int>& arr)
             break;
         }
     }
-    for(int i=j+1;i<n;i++)
+    for(int i=j+1;i<n;i++)   //o(n-x)
     {
         if(arr[i]!=0)
         {
