@@ -56,7 +56,6 @@ void optimal(vector<int>& arr)        // o(n) + o(1)
         {
             swap(arr[high],arr[mid]);
             high--;
-            mid++;
         }
    }
     
