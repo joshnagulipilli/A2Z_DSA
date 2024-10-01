@@ -72,15 +72,15 @@ int better(vector<int>& arr,int k)    // o(nlogn) + o(n);
 }
 
 
-int optimal(vector<int>& arr,int k) 
+int optimal(vector<int>& arr,int k)   // o(n + n)
 {
    int len=0;
    int left=0,right=0;
    int n=arr.size();
    int sum=0;
-   while(right<n)
+   while(right<n)                // o(n)
    {
-    while(left<=right && sum>k)
+    while(left<=right && sum>k)  // sometimes 
     {
         sum-=arr[left];
         left++;
