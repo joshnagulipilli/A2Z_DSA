@@ -35,7 +35,7 @@ int better(vector<int>& arr)     //o(nlogn) + o(n)
 
 
 //Moore Voting algorithm
-int optimal(vector<int>& arr)        // o(n + n) + o(1);
+int optimal(vector<int>& arr)        // o(n + n) + o(1)
 {
    int n=arr.size();
   // int curr;    -->   v[i]              // to check previous counted el is curr 
