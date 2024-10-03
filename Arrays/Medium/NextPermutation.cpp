@@ -21,11 +21,11 @@ void better(vector<int>& arr)    //o*(n)
 }
 
 
-void optimal(vector<int>& arr)   //o(n) + o(1)  
+void optimal(vector<int>& arr)   //o(n+n+n-x) + o(1)  
 {
   int n=arr.size();
   int ind=-1;
-  for(int i=0;i<n-1;i++)
+  for(int i=n-2;i>=0;i--)        //o(n) in worst case
   {
     if(arr[i]<arr[i+1])
     {
@@ -35,7 +35,7 @@ void optimal(vector<int>& arr)   //o(n) + o(1)
   }
   if(ind==-1) 
   {
-    reverse(arr.begin(),arr.end());
+    reverse(arr.begin(),arr.end());   //o(n)
     return ;
   }
   for(int i=n-1;i>=ind;i--)
@@ -46,7 +46,7 @@ void optimal(vector<int>& arr)   //o(n) + o(1)
         break;
     }
   }
-  reverse(arr.begin()+ind+1,arr.end());
+  reverse(arr.begin()+ind+1,arr.end());   //o(n-x)
   return ;
 
 }
