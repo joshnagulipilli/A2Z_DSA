@@ -14,16 +14,41 @@ int brute(vector<int>& arr)   //
 }
 
 
-void better(vector<int>& arr)    
+void better(vector<int>& arr)    //o*(n)
 {
        next_permutation(arr.begin(),arr.end());
 
 }
 
 
-int optimal(vector<int>& arr)   //o(n) + o(1)  
+void optimal(vector<int>& arr)   //o(n) + o(1)  
 {
-  
+  int n=arr.size();
+  int ind=-1;
+  for(int i=0;i<n-1;i++)
+  {
+    if(arr[i]<arr[i+1])
+    {
+        ind=i;
+        break;
+    }
+  }
+  if(ind==-1) 
+  {
+    reverse(arr.begin(),arr.end());
+    return ;
+  }
+  for(int i=n-1;i>=ind;i--)
+  {
+    if(arr[i]>arr[ind])
+    {
+        swap(arr[ind],arr[i]);
+        break;
+    }
+  }
+  reverse(arr.begin()+ind+1,arr.end());
+  return ;
+
 }
 int main()
 {
@@ -34,9 +59,9 @@ int main()
     {
         cin>>arr[i];
     }
-    // cout<<brute(arr)<<endl;
-    better(arr);
-    // cout<<optimal(arr)<<endl;
+    // brute(arr);
+    // better(arr);
+    optimal(arr);
     for(int i=0;i<n;i++) cout<<arr[i]<<" ";
     
 }
