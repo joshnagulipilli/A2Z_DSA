@@ -34,7 +34,7 @@ void better(vector<vector<int>>& arr,int n,int m)    //
 
 //transpose and reverse
 
-void optimal(vector<vector<int>>& arr,int n ,int m)   //o(n*m) = o(1)
+void optimal(vector<vector<int>>& arr,int n ,int m)   //o(n*m + n) = o(1)
 {
      for(int i=0;i<n-1;i++) // doesnt change diagonal which is last element
      {
@@ -42,6 +42,8 @@ void optimal(vector<vector<int>>& arr,int n ,int m)   //o(n*m) = o(1)
         {
             swap(arr[i][j],arr[j][i]);
         }
+        }
+        for(int i=0;i<n;i++){
         reverse(arr[i].begin(),arr[i].end());
      }
      for(int i=0;i<n;i++)
