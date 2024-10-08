@@ -24,8 +24,7 @@ vector<vector<int>> brute(vector<int>& arr,int sum)     // o(n*n*n * log(set ins
     vector<vector<int>>ans(st.begin(),st.end());
     return ans;
 }
-
-vector<vector<int>> better(vector<int>& arr,int sum)  
+vector<vector<int>> better(vector<int>& arr,int sum)  // o(n*n log(triplets))  + o(2*triplets + n(hashset)) 
 {
    set<vector<int>>st;
    for(int i=0;i<arr.size();i++)
