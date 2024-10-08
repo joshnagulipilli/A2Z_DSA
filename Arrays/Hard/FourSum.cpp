@@ -60,7 +60,7 @@ vector<vector<int>> better(vector<int>& arr,int sum)  // o(n*n*n*logm) + o(2* no
 }
 
 
-vector<vector<int>> optimal(vector<int>& arr,int sum)    
+vector<vector<int>> optimal(vector<int>& arr,int sum)    // o(nlogn * n*n*n)  + o(no of quads)
 {
         vector<vector<int>>ans;
         int n=arr.size();
