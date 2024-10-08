@@ -47,7 +47,7 @@ int better(vector<int>& arr)     //o(n*n) + o(1)
 }
 
 //using hashing  works for both negatives and positives 
-int optimal(vector<int>& arr)  
+int optimal(vector<int>& arr)   //o(n + log n) + o(n)
 {
     int n=arr.size();
     unordered_map<int,int> mp;
