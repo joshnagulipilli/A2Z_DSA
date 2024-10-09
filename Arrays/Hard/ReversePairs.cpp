@@ -22,7 +22,7 @@ int better(vector<int>& arr)
 }
 //concept of merge sort
 
-void merge(vector<int>& arr,int low,int mid,int high)
+void merge(vector<int>& arr,int low,int mid,int high)//o(n)
 {
     vector<int>temp;
     int left=low;
@@ -56,14 +56,14 @@ void merge(vector<int>& arr,int low,int mid,int high)
     }
 }
 
-int countPairs(vector<int>& arr, int low,int mid,int high)
+int countPairs(vector<int>& arr, int low,int mid,int high) //o(n1+n2)->o(n)
 {
     int cnt=0;
     int right=mid+1;
-    for(int i=low;i<=mid;i++)
+    for(int i=low;i<=mid;i++)                //o(n1)
     {
-        while(right<=high && arr[i]>2*arr[right])
-        {
+        while(right<=high && arr[i]>2*arr[right]) //o(n2)
+        { 
             right++;
         }
         cnt+=(right-(mid+1));
@@ -71,7 +71,7 @@ int countPairs(vector<int>& arr, int low,int mid,int high)
     return cnt;
 }
 
-int mergeSort(vector<int>& arr, int low,int high) 
+int mergeSort(vector<int>& arr, int low,int high)  //o(log n)
 {
     int cnt=0;
     if(low>=high) return cnt;
@@ -82,7 +82,7 @@ int mergeSort(vector<int>& arr, int low,int high)
     merge(arr,low,mid,high);
     return cnt;
 }
-int optimal(vector<int>& arr)   
+int optimal(vector<int>& arr)    //o(2nlogn) + o(n)
 {
      return mergeSort(arr,0,arr.size()-1);
 }
