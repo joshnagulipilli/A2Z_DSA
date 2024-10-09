@@ -67,7 +67,7 @@ void swapGreater(vector<int>&arr1,vector<int>&arr2,int ind1,int ind2)
     swap(arr1[ind1],arr2[ind2]);
 }
 
-void optimal2(vector<int>& arr1,vector<int>& arr2)  
+void optimal2(vector<int>& arr1,vector<int>& arr2)  //o(log(n+m) * (n+m)) + o(1)
 {
     int n=arr1.size(),m=arr2.size();
     int len=(n+m);
