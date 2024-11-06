@@ -49,6 +49,7 @@ int main()
     //step 3 : mark all multiples of primes in (l-r) range through the generated primes
     for(auto pr:primes)
     {
+        cout<<pr<<endl;
         int firstMultiple=(l/pr)*pr;
         if(firstMultiple<l)
         {

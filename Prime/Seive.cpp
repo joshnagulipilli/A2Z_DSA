@@ -21,7 +21,7 @@ void createSieve()
     {
         if(sieve[i]==true)  // only consider when it is not multiple of any previous numbers
         {
-            for(int j=i*i;j<=n;j+=i)    // log    ==> both loops  log(logvn)
+            for(int j=i*i;j<=n;j+=i)    // log    ==> both loops  log(log n)
             {
                 sieve[j]=false;
             }
