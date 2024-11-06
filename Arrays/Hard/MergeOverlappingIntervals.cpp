@@ -15,9 +15,9 @@ vector<pair<int,int>> brute(vector<pair<int,int>>& arr)   //o(nlogn + 2N) + o(n)
         {
            continue;
         }
-        for(int j=i+1;j<n;j++)                   //o(n-x) not moves end since overlapping may not occurs in all pairs
+        for(int j=i+1;j<n;j++)                  //o(n-x) not moves end since overlapping may not occurs in all pairs
         {
-            if(arr[j].first < end)
+            if(arr[j].first <= end)
             {
                 end=max(end,arr[j].second);
             }
@@ -45,8 +45,6 @@ vector<pair<int,int>> optimal(vector<pair<int,int>>& arr) //o(nlogn + n) + o(n)
    }
    return ans;
 }
-
-
 
 
 int main()
